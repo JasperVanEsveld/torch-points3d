@@ -4,6 +4,8 @@ import numpy as np
 import torch_geometric.transforms as T
 from .transforms import *
 from .grid_transform import *
+from .vectorheat import *
+from .dijkstra import *
 from .sparse_transforms import *
 from .inference_transforms import *
 from .feature_augment import *
