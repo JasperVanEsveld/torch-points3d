@@ -1,0 +1,10 @@
+# @package models
+defaults:
+  - segmentation/default
+
+MoNet:
+  class: gmm.MoNet
+  conv_type: "MESSAGE_PASSING"
+  n_classes: N_CLS
+  n_neighbours: 10
+  hidden: 100

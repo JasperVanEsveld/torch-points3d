@@ -1,0 +1,18 @@
+# @package data
+defaults:
+  - segmentation/default
+
+class: shapenet.ShapeNetDataset
+use_category: True # Use object category information
+category: ["Airplane", "Chair", "Table"]
+task: segmentation
+dataroot: data/small
+pre_transforms: # Offline transforms, done only once
+  - transform: VectorHeat
+    params:
+      n: 100
+      n_neighbours: 10
+  # - transform: AddFeatsByKeys
+  #   params:
+  #     list_add_to_x: [True]
+  #     feat_names: ["maps"]

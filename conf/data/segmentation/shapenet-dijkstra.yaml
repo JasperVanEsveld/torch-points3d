@@ -1,0 +1,14 @@
+# @package data
+defaults:
+  - segmentation/default
+
+class: shapenet.ShapeNetDataset
+use_category: True # Use object category information
+category: ["Airplane", "Chair", "Table"]
+task: segmentation
+dataroot: data/dijkstra
+pre_transforms: # Offline transforms, done only once
+  - transform: Dijkstra
+    params:
+      n: 500
+      n_neighbours: 10
